@@ -26,7 +26,6 @@ public class A1Novice {
 				String productName = scan.next();
 				double productPrice = scan.nextDouble();
 				customerSum += (numProduct * productPrice);
-			// System.out.println(String.format("%.2f", customerSum));
 			}
 			String custSumString = String.format("%.2f", customerSum);
 			System.out.println(first.charAt(0) + ". " + last + ": " + custSumString);
