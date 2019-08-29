@@ -13,6 +13,8 @@ public class A1Novice {
 		// number of customers (first integer)
 		int numCustomers = scan.nextInt();
 		
+		// create w
+				
 		// loop through all customers
 		for (int i = 0; i < numCustomers; i++) {
 			// first collect customer name (formatting in print statement)
@@ -24,7 +26,7 @@ public class A1Novice {
 
 			// declare customer sum outside for loop so it is accessible for print statement
 			double customerSum = 0;
-			
+					
 			// loop through customer products using the numItem that was scanned previously
 			for (int j = 0; j < numItems; j++) {
 				// first number is an integer that represents product quantity
@@ -38,11 +40,11 @@ public class A1Novice {
 			}
 			// convert customer sum to string formatting in order to print
 			String custSumString = String.format("%.2f", customerSum);
-			
+					
 			// combine and format elements to print
 			System.out.println(first.charAt(0) + ". " + last + ": " + custSumString);
-			
-			
+					
+					
 		}
 		// all input has been processed to scanner can close
 		scan.close();
