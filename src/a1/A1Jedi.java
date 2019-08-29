@@ -41,18 +41,36 @@ public class A1Jedi {
 			
 			// next int is number of different items bought by customer
 			int numCustProducts = scan.nextInt();
+			
+			// create an array to hold the product names that the customer bought
+			String[] custProducts = new String[numCustProducts];
+			
 			// loop through to update quantity array
 			for (int j = 0; j < numCustProducts; j++) {
 				// create variable to hold quantity (next integer)
 				int currentQuant = scan.nextInt();
-				// scan next string to get product name
+				// scan next string to get product name and add to product array
 				String currentName = scan.next();
+				custProducts[j] = currentName;
+				
 				// loop through product array to match product and update quantity
 				for (int b = 0; b < productNames.length; b++) {
 					if (currentName.equals(productNames[b])) {
 						// update the quantity array and the corresponding index of number of customers who bought that item
 						productQuant[b] += currentQuant;
-						numCustomersBought[b]++;
+						break;
+					}
+				}
+			}
+			
+			// now that custProducts is full, loop through store products and update numCustomersBrought
+			for (int j = 0; j < productNames.length; j++) {
+				// create variable to hold name of current product
+				String checkProduct = productNames[j];
+				// loop through customer products to see if current product is contained
+				for (int b = 0; b < custProducts.length; b++) {
+					if (custProducts[b].equals(checkProduct)) {
+						numCustomersBought[j] += 1;
 						break;
 					}
 				}
