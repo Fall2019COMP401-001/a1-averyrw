@@ -65,7 +65,7 @@ public class A1Adept {
 				for (int b = 0; b < productNames.length; b++) {
 					if (currentProduct.equals(productNames[b])) {
 						productPrice = productPrices[b];
-						b = productNames.length; // break?
+						break;
 					}
 				}
 				
